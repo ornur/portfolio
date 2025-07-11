@@ -17,23 +17,14 @@ const addTextBackgroundUtilities = ({ addUtilities, theme }: any) => {
       'transition': 'filter 0.3s ease',
       'background-image': "url('/text-bg.jpg')", // Default light mode
     },
-    '.text-bg-light': {
-      'background-image': "url('/text-bg-white.jpg')",
-			"filter": 'invert(0.8)',
-    },
-    '.text-bg-dark': {
+    '.text-bg-animated-dark': {
       'background-image': "url('/text-bg-white.jpg')",
       'filter': 'brightness(1.2) contrast(1.3)',
     },
-    // Dark mode media query
-    '@media (prefers-color-scheme: dark)': {
-      '.text-bg-animated': {
-        'background-image': "url('/text-bg-white.jpg')",
-        'filter': 'brightness(1.2) contrast(1.3)',
-      }
+    '.text-bg-light': {
+      'background-image': "url('/text-bg.jpg')",
     },
-    // Manual dark mode class
-    '.dark .text-bg-animated': {
+    '.text-bg-dark': {
       'background-image': "url('/text-bg-white.jpg')",
       'filter': 'brightness(1.2) contrast(1.3)',
     }

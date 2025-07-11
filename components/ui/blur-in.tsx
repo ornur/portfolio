@@ -46,13 +46,13 @@ const BlurIn = ({
   };
 
   const combinedVariants = useMask ? maskVariants : (variant || defaultVariants);
-
   // Base animated background styles - now using Tailwind classes
   const getAnimatedBackgroundClasses = () => {
     if (!useAnimatedBackground) return '';
-
+    
     return cn(
-      'text-bg-animated animate-animate-background'
+      'text-bg-animated animate-animate-background',
+      'dark:text-bg-animated-dark' // Use dark mode variant
     );
   };
 
