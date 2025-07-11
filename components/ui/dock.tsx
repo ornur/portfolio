@@ -161,8 +161,9 @@ function DockItem({ children, className, onClick }: DockItemProps) {
   const dockContext = useContext(DockContext)
   const { distance = DEFAULT_DISTANCE, magnification = DEFAULT_MAGNIFICATION, mouseX, spring } = dockContext || {}
 
-  // Always call hooks with safe fallbacks
-  const safeMouseX = mouseX || useMotionValue(Number.POSITIVE_INFINITY)
+  // Always call hooks - never conditionally
+  const fallbackMouseX = useMotionValue(Number.POSITIVE_INFINITY)
+  const safeMouseX = mouseX || fallbackMouseX
   const safeSpring = spring || { mass: 0.1, stiffness: 150, damping: 12 }
 
   const mouseDistance = useTransform(safeMouseX, (value: number) => {
