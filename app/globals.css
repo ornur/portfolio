@@ -1,29 +1,198 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-  font-family: "SFProRegular";
-  src: url("./fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-color-1: hsl(var(--color-1));
+  --color-color-2: hsl(var(--color-2));
+  --color-color-3: hsl(var(--color-3));
+  --color-color-4: hsl(var(--color-4));
+  --color-color-5: hsl(var(--color-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-regular: SFProRegular, sans-serif;
+  --font-medium: SFProMedium, sans-serif;
+  --font-bold: SFProBold, sans-serif;
+
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite
+    alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  --animate-animate-background: animate-background 5s infinite alternate linear;
+  --animate-blur-in: blur-in 1s ease-out forwards;
+  --animate-blur-in-mask: blur-in-mask 0.8s ease-out forwards;
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  @keyframes shimmer-slide {
+    to {
+      transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+    0% {
+      transform: translateZ(0) rotate(0);
+    }
+    15%,
+    35% {
+      transform: translateZ(0) rotate(90deg);
+    }
+    65%,
+    85% {
+      transform: translateZ(0) rotate(270deg);
+    }
+    100% {
+      transform: translateZ(0) rotate(360deg);
+    }
+  }
+  @keyframes animate-background {
+    0% {
+      background-position: 0 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes blur-in {
+    0% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes blur-in-mask {
+    0% {
+      filter: blur(10px);
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+      clip-path: inset(0 0% 0 0);
+    }
+  }
 }
 
-@font-face {
-  font-family: "SFProMedium";
-  src: url("./fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-@font-face {
-  font-family: "SFProBold";
-  src: url("./fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@utility text-balance {
+  text-wrap: balance;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-bg-animated {
+    color: transparent;
+    background-size: 200%;
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: filter 0.3s ease;
+    background-image: url('/text-bg.jpg');
+  }
+
+  /* Use your custom dark variant that matches @custom-variant dark (&:is(.dark *)) */
+  .text-bg-animated:is(.dark *) {
+    background-image: url('/text-bg-white.jpg') !important;
+    filter: brightness(1.2) contrast(1.3);
+  }
+
+  .text-bg-animated-dark {
+    background-image: url('/text-bg-white.jpg');
+    filter: brightness(1.2) contrast(1.3);
+  }
+
+  .text-bg-light {
+    background-image: url('/text-bg.jpg');
+  }
+
+  .text-bg-dark {
+    background-image: url('/text-bg-white.jpg');
+    filter: brightness(1.2) contrast(1.3);
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: 'SFProRegular';
+    src: url('./fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SFProMedium';
+    src: url('./fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SFProBold';
+    src: url('./fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
@@ -95,9 +264,10 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--color-border);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 }

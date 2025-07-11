@@ -51,8 +51,8 @@ const BlurIn = ({
     if (!useAnimatedBackground) return '';
     
     return cn(
-      'text-bg-animated animate-animate-background',
-      'dark:text-bg-animated-dark' // Use dark mode variant
+      'text-bg-animated animate-animate-background'
+      // Dark mode is now handled automatically in CSS
     );
   };
 
