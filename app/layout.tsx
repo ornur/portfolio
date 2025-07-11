@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth!">
-      <body className="flex flex-col justify-center items-center font-regular">
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex flex-col justify-center items-center font-regular scroll-smooth!" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
