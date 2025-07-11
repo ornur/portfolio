@@ -13,7 +13,7 @@ const About = () => {
     <div ref={ref} className="mt-96 flex justify-center">
       {inView && (
         <BlurIn
-          word="Full-Stack Developer based in the Philippines"
+          word="Fronted Developer from Kazakhstan"
           className="font-medium text-3xl w-[90%] md:text-4xl md:w-[60%]"
         />
       )}
