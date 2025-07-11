@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaXTwitter,
+  FaTelegram,
 } from "react-icons/fa6";
 import BoxReveal from "./ui/box-reveal";
 import GridPattern from "./ui/animated-grid-pattern";
@@ -32,7 +33,7 @@ const Hero = () => {
             </BoxReveal>
             <BoxReveal boxColor="black" duration={0.5}>
               <h1 className="text-4xl md:text-5xl font-medium flex items-center">
-                I&apos;m Mark Louie
+                I&apos;m Nurdaulet
               </h1>
             </BoxReveal>
           </div>
@@ -49,16 +50,13 @@ const Hero = () => {
       <BoxReveal boxColor="black" duration={0.5}>
         <ul className="flex space-x-2 mt-3">
           <li>
-            <Link href={"https://github.com/marrrkkk"} target="_blank"><FaGithub className="size-7 md:size-8" /></Link>
+            <Link href={"https://github.com/ornur"} target="_blank"><FaGithub className="size-7 md:size-8" /></Link>
           </li>
           <li>
-            <Link href={"https://x.com/marrrkkk__"} target="_blank"><FaXTwitter className="size-7 md:size-8" /></Link>
+            <Link href={"https://t.me/nurda_oryn"} target="_blank"><FaTelegram className="size-7 md:size-8" /></Link>
           </li>
           <li>
-            <Link href={"https://www.instagram.com/marrrrkkkk__/"} target="_blank"><FaInstagram className="size-7 md:size-8" /></Link>
-          </li>
-          <li>
-            <Link href={"https://www.linkedin.com/in/mark-louie-alvarez-b90162257/"} target="_blank"><FaLinkedin className="size-7 md:size-8" /></Link>
+            <Link href={"https://www.linkedin.com/in/nurdaulet-orynbasarov/"} target="_blank"><FaLinkedin className="size-7 md:size-8" /></Link>
           </li>
         </ul>
       </BoxReveal>
