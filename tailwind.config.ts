@@ -5,6 +5,43 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+const addTextBackgroundUtilities = ({ addUtilities, theme }: any) => {
+  const newUtilities = {
+    '.text-bg-animated': {
+      'color': 'transparent',
+      'background-size': '200%',
+      'background-position': '0 50%',
+      'background-clip': 'text',
+      '-webkit-background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+      'transition': 'filter 0.3s ease',
+      'background-image': "url('/text-bg.jpg')", // Default light mode
+    },
+    '.text-bg-light': {
+      'background-image': "url('/text-bg-white.jpg')",
+			"filter": 'invert(0.8)',
+    },
+    '.text-bg-dark': {
+      'background-image': "url('/text-bg-white.jpg')",
+      'filter': 'brightness(1.2) contrast(1.3)',
+    },
+    // Dark mode media query
+    '@media (prefers-color-scheme: dark)': {
+      '.text-bg-animated': {
+        'background-image': "url('/text-bg-white.jpg')",
+        'filter': 'brightness(1.2) contrast(1.3)',
+      }
+    },
+    // Manual dark mode class
+    '.dark .text-bg-animated': {
+      'background-image': "url('/text-bg-white.jpg')",
+      'filter': 'brightness(1.2) contrast(1.3)',
+    }
+  };
+
+  addUtilities(newUtilities);
+};
+
 const addVariablesForColors = ({ addBase, theme }: any) => {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
@@ -82,45 +119,79 @@ const config: Config = {
   			medium: ["SFProMedium", "sans-serif"],
   			bold: ["SFProBold", "sans-serif"]
   		},
-  		animation: {
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
-  		},
-  		keyframes: {
-  			rainbow: {
-  				'0%': {
-  					'background-position': '0%'
-  				},
-  				'100%': {
-  					'background-position': '200%'
-  				}
-  			},
-  			'shimmer-slide': {
-  				to: {
-  					transform: 'translate(calc(100cqw - 100%), 0)'
-  				}
-  			},
-  			'spin-around': {
-  				'0%': {
-  					transform: 'translateZ(0) rotate(0)'
-  				},
-  				'15%, 35%': {
-  					transform: 'translateZ(0) rotate(90deg)'
-  				},
-  				'65%, 85%': {
-  					transform: 'translateZ(0) rotate(270deg)'
-  				},
-  				'100%': {
-  					transform: 'translateZ(0) rotate(360deg)'
-  				}
-  			}
-  		}
+		animation: {
+			rainbow: 'rainbow var(--speed, 2s) infinite linear',
+			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
+			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+			'animate-background': 'animate-background 5s infinite alternate linear',
+			'blur-in': 'blur-in 1s ease-out forwards',
+			'blur-in-mask': 'blur-in-mask 0.8s ease-out forwards'
+		},
+		keyframes: {
+			rainbow: {
+				'0%': {
+					'background-position': '0%'
+				},
+				'100%': {
+					'background-position': '200%'
+				}
+			},
+			'shimmer-slide': {
+				to: {
+					transform: 'translate(calc(100cqw - 100%), 0)'
+				}
+			},
+			'spin-around': {
+				'0%': {
+					transform: 'translateZ(0) rotate(0)'
+				},
+				'15%, 35%': {
+					transform: 'translateZ(0) rotate(90deg)'
+				},
+				'65%, 85%': {
+					transform: 'translateZ(0) rotate(270deg)'
+				},
+				'100%': {
+					transform: 'translateZ(0) rotate(360deg)'
+				}
+			},
+			'animate-background': {
+				'0%': {
+					'background-position': '0 50%'
+				},
+				'100%': {
+					'background-position': '100% 50%'
+				}
+			},
+			'blur-in': {
+				'0%': {
+					filter: 'blur(10px)',
+					opacity: '0'
+				},
+				'100%': {
+					filter: 'blur(0px)',
+					opacity: '1'
+				}
+			},
+			'blur-in-mask': {
+				'0%': {
+					filter: 'blur(10px)',
+					opacity: '0',
+					'clip-path': 'inset(0 100% 0 0)'
+				},
+				'100%': {
+					filter: 'blur(0px)',
+					opacity: '1',
+					'clip-path': 'inset(0 0% 0 0)'
+				}
+			}
+		}
   	}
   },
   plugins: [
     require("tailwindcss-animate"),
     addVariablesForColors, // Add the custom plugin here
+    addTextBackgroundUtilities, // Add text background utilities
   ],
 };
 
