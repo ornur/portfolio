@@ -1,0 +1,150 @@
+import React from "react";
+import { Activity, HomeIcon, Mail, ScrollText, SunMoon } from "lucide-react";
+
+export const links = [
+  {
+    title: "Home",
+    icon: React.createElement(HomeIcon),
+    href: "#",
+  },
+  {
+    title: "Activity",
+    icon: React.createElement(Activity),
+    href: "https://github.com/ornur/",
+  },
+  {
+    title: "Resume",
+    icon: React.createElement(ScrollText),
+    href: "/CV_EN.pdf",
+  },
+  {
+    title: "Email",
+    icon: React.createElement(Mail),
+    href: "mailto:nurdauletaidaruli@gmail.com",
+  },
+  {
+    title: "Theme",
+    icon: React.createElement(SunMoon),
+    href: "#",
+  },
+];
+
+export const techs = [
+  {
+    name: "NextJS",
+    description: "Full-Stack Framework",
+    icon: "/next.svg",
+    color: "#3c3c3c",
+  },
+  {
+    name: "ReactJS",
+    description: "Frontend Framework",
+    icon: "/react.svg",
+    color: "#61dafb33",
+  },
+  {
+    name: "Tailwind",
+    description: "CSS Framework",
+    icon: "/tailwind.svg",
+    color: "#0ea5e933",
+  },
+  {
+    name: "Figma",
+    description: "Design Tool",
+    icon: "/figma.svg",
+    color: "#0acf8333",
+  },
+  {
+    name: "Express",
+    description: "Backend Framework",
+    icon: "/express.svg",
+    color: "#3c3c3c",
+  },
+];
+
+export const experience = [
+  {
+    title: "Front-End Developer",
+    company: "ZIZ INC.",
+    date: "June 2024 - June 2025",
+    description:
+      "Developed and maintained user interfaces for web applications using React and Next.js. Collaborated with designers to implement responsive designs and improve user experience. Optimized application performance and ensured cross-browser compatibility.",
+  },
+];
+
+export const projects = [
+  {
+    title: "NoteMe",
+    tech: "Nextjs, Supabase",
+    image: "/projects/01.webp",
+    url: "https://notemelink.vercel.app/",
+  },
+  {
+    title: "Movie Browser",
+    tech: "Nextjs, Shadcn",
+    image: "/projects/02.webp",
+    url: "https://nextjs-movie-search.vercel.app/",
+  },
+  {
+    title: "Saas Landing Page",
+    tech: "Nextjs, Supabase",
+    image: "/projects/03.webp",
+    url: "https://saas-landing-page-mark.vercel.app/",
+  },
+  {
+    title: "Github Card Generator",
+    tech: "Nexjs, Github API",
+    image: "/projects/04.webp",
+    url: "https://github-stats-card-generator.vercel.app/",
+  },
+];
+
+export const TECHNOLOGIES = [
+  {
+    id: "nextjs",
+    title: "Next.js",
+    description: "A Modern React framework built by ",
+    author: "@vercel",
+    website: "https://vercel.com",
+    icon: "/icons/nextjs.svg",
+    position: { row: 1, col: 1 },
+  },
+  {
+    id: "react",
+    title: "React",
+    description:
+      "A JavaScript library for building user interfaces built by the developers at ",
+    author: "@facebook",
+    website: "https://react.dev",
+    icon: "/icons/react.svg",
+    position: { row: 1, col: 2 },
+  },
+  {
+    id: "tailwind",
+    title: "Tailwind CSS",
+    description: "A utility-first CSS framework built by ",
+    author: "@tailwindcss",
+    website: "https://tailwindcss.com",
+    icon: "/icons/tailwind.svg",
+    position: { row: 1, col: 3 },
+  },
+  {
+    id: "typescript",
+    title: "TypeScript",
+    description:
+      "A statically typed programming language that builds on JavaScript built by ",
+    author: "@microsoft",
+    website: "https://www.typescriptlang.org/",
+    icon: "/icons/typescript.svg",
+    position: { row: 2, col: 1 },
+  },
+  {
+    id: "nodejs",
+    title: "Node.js",
+    description: "A runtime environment to run JavaScript on servers ",
+    author: "@nodejs",
+    website: "https://nodejs.org/en",
+    icon: "/icons/nodejs.svg",
+    position: { row: 2, col: 2 },
+  },
+];
