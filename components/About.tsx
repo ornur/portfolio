@@ -19,7 +19,7 @@ const About = () => {
             useAnimatedBackground
             useMask
             duration={2}
-            delay={0.5}
+            delay={0}
           />
           <BlurIn
             description
