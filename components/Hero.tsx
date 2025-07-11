@@ -1,8 +1,6 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedin,
-  FaXTwitter,
   FaTelegram,
 } from "react-icons/fa6";
 import BoxReveal from "./ui/box-reveal";
@@ -67,7 +65,7 @@ const Hero = () => {
         duration={3}
         repeatDelay={1}
         className={cn(
-          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "mask-[radial-gradient(500px_circle_at_center,white,transparent)]",
           "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 -z-50"
         )}
       />

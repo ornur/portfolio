@@ -61,7 +61,7 @@ function TechCard({
   children,
 }: TechCardProps) {
   return (
-    <div className="card w-full h-44 dark:bg-card border-black rounded-md border hover:border-[var(--border-bright)] dark:border-border dark:hover:border-[var(--border-bright)] dark:hover:bg-[var(--accent-bright)] transition-all duration-300 ease-in-out">
+    <div className="card w-full h-44 dark:bg-card border-black rounded-md border hover:border-(--border-bright) dark:border-border dark:hover:border-(--border-bright) dark:hover:bg-(--accent-bright) transition-all duration-300 ease-in-out">
       <HoverCardWrapper
         description={description}
         author={author}
@@ -104,7 +104,7 @@ function HoverCardWrapper({
               href={website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[var(--geist-cyan)] bg-[var(--geist-cyan-dark)] px-1 rounded hover:underline transition-colors"
+              className="inline-flex items-center text-(--geist-cyan) bg-(--geist-cyan-dark) px-1 rounded hover:underline transition-colors"
             >
               {author}
             </Link>

@@ -101,7 +101,7 @@ const MaskedTextAnimation = ({
 
   return (
     <div className={cn(
-      "font-display text-center font-bold tracking-[-0.02em] drop-shadow-sm md:leading-[5rem]",
+      "font-display text-center font-bold tracking-[-0.02em] drop-shadow-xs md:leading-20",
       description ? "text-sm md:text-xl" : "text-3xl md:text-7xl",
       className,
     )}>
@@ -153,7 +153,7 @@ const SingleTextAnimation = ({
       transition={{ duration, delay }}
       variants={combinedVariants}
       className={cn(
-        "font-display text-center font-bold tracking-[-0.02em] drop-shadow-sm md:leading-[5rem]",
+        "font-display text-center font-bold tracking-[-0.02em] drop-shadow-xs md:leading-20",
         description ? "text-sm md:text-xl" : "text-3xl md:text-7xl",
         animatedBackgroundClasses,
         className,
