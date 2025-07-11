@@ -73,29 +73,29 @@ export const experience = [
 ];
 
 export const projects = [
-  {
-    title: "NoteMe",
-    tech: "Nextjs, Supabase",
-    image: "/projects/01.webp",
-    url: "https://notemelink.vercel.app/",
+    {
+    title: "Let's Car",
+    tech: "Shadcn, Motion",
+    image: "/projects/3.webp",
+    url: "https://lets-car.com/",
   },
   {
-    title: "Movie Browser",
+    title: "Green Data Center",
+    tech: "Nextjs, Tailwind",
+    image: "/projects/2.webp",
+    url: "https://green-dc.vercel.app/",
+  },
+  {
+    title: "Sensor data visualization",
     tech: "Nextjs, Shadcn",
-    image: "/projects/02.webp",
-    url: "https://nextjs-movie-search.vercel.app/",
+    image: "/projects/1.webp",
+    url: "https://factory.abzy.kz/",
   },
   {
-    title: "Saas Landing Page",
-    tech: "Nextjs, Supabase",
-    image: "/projects/03.webp",
-    url: "https://saas-landing-page-mark.vercel.app/",
-  },
-  {
-    title: "Github Card Generator",
-    tech: "Nexjs, Github API",
-    image: "/projects/04.webp",
-    url: "https://github-stats-card-generator.vercel.app/",
+    title: "Saas Next.js Framer Motion",
+    tech: "Nexjs, Framer Motion",
+    image: "/projects/4.webp",
+    url: "https://saas-next-framer-motion.vercel.app/",
   },
 ];
 
