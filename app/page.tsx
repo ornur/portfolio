@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
-const Home = () => {
+export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center">
       <Nav />
@@ -19,5 +19,3 @@ const Home = () => {
     </main>
   );
 };
-
-export default Home;
