@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
-import Techs from "@/components/Techs";
+import Stack from "@/components/Stack";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
@@ -12,7 +12,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
-      <Techs />
+      <Stack />
       <Experience />
       <Projects />
       <Footer />
