@@ -41,7 +41,7 @@ interface HoverCardWrapperProps {
 export default function Techs() {
   return (
     <motion.div
-      className="mt-40 xl:w-[45%] md:w-[70%] w-[80%]"
+      className="mt-40 w-full"
       initial={{ opacity: 0, y: 25 }}
       whileInView={{
         opacity: 1,
