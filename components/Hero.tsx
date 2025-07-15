@@ -21,7 +21,7 @@ const Hero = () => {
           <Image
             src="/me.webp"
             alt="me"
-            className="rounded-full aspect-[1/1] object-cover mx-auto mb-6"
+            className="rounded-full aspect-square object-cover mx-auto mb-6"
             height={300}
             width={300}
           />
