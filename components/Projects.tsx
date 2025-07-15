@@ -1,11 +1,12 @@
 "use client";
 
-import { projects } from "@/lib/data";
 import { ArrowUpRight } from "lucide-react";
-import { AspectRatio } from "./ui/aspect-ratio";
 import { motion } from "motion/react";
+
 import Image from "next/image";
 import Link from "next/link";
+
+import { projects } from "@/lib/data";
 
 const Projects = () => {
   return (
@@ -22,16 +23,14 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <Link href={project.url} target="_blank">
-              <AspectRatio ratio={16 / 9} className="bg-muted">
-                <div>
-                  <Image
-                    src={project.image}
-                    alt="Photo by Drew Beamer"
-                    fill
-                    className="h-full w-full rounded object-cover"
-                  />
-                </div>
-              </AspectRatio>
+              <div className="aspect-video bg-muted relative">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="h-full w-full rounded object-cover"
+                />
+              </div>
               <div className="flex items-center justify-between mt-3">
                 <span>
                   <h1 className="text-sm">{project.title}</h1>
