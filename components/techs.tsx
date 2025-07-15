@@ -1,11 +1,15 @@
+"use client";
+
+import { motion } from "motion/react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "./ui/hover-card";
+import { TECHNOLOGIES } from "@/lib/data";
+
 import Link from "next/link";
 import Image from "next/image";
-import { TECHNOLOGIES } from "@/lib/data";
 
 // Type definitions
 interface Technology {
@@ -36,19 +40,36 @@ interface HoverCardWrapperProps {
 // Main component
 export default function Techs() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {TECHNOLOGIES.map((tech) => (
-        <TechCard
-          key={tech.id}
-          {...tech}
-          icon={tech.icon}
-        >
-          <span className="font-medium text-lg tracking-tight">
-            {tech.title}
-          </span>
-        </TechCard>
-      ))}
-    </div>
+    <motion.div
+      className="mt-40 xl:w-[45%] md:w-[70%] w-[80%]"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 },
+      }}
+    >
+      <section className="techs flex flex-col gap-6 p-(--padding) py-16 mb-12 max-sm:text-center w-full">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-5xl font-bold tracking-[-0.02em]">
+            What I work with
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {TECHNOLOGIES.map((tech) => (
+            <TechCard
+              key={tech.id}
+              {...tech}
+              icon={tech.icon}
+            >
+              <span className="font-medium text-lg tracking-tight">
+                {tech.title}
+              </span>
+            </TechCard>
+          ))}
+        </div>
+      </section>
+    </motion.div>
   );
 }
 

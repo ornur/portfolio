@@ -40,7 +40,7 @@ export const experience = [
 ];
 
 export const projects = [
-    {
+  {
     title: "Let's Car",
     tech: "Shadcn, Motion",
     image: "/projects/3.webp",
@@ -104,6 +104,15 @@ export const TECHNOLOGIES = [
     website: "https://www.typescriptlang.org/",
     icon: "/icons/typescript.svg",
     position: { row: 2, col: 1 },
+  },
+  {
+    id: "shadcn-ui",
+    title: "Shadcn UI",
+    description: "A component library for building modern UIs",
+    author: "@shadcn",
+    website: "https://ui.shadcn.com",
+    icon: "/icons/shadcn.svg",
+    position: { row: 2, col: 3 },
   },
   {
     id: "nodejs",
