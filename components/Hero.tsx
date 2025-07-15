@@ -11,7 +11,6 @@ import { GridPattern } from "./ui/animated-grid-pattern";
 
 import Image from "next/image";
 import Link from "next/link";
-import ScrollButton from "./ScrollButton";
 
 const Hero = () => {
   return (
@@ -55,7 +54,6 @@ const Hero = () => {
           </li>
         </ul>
       </BoxReveal>
-      <ScrollButton />
       <GridPattern
         numSquares={30}
         maxOpacity={0.1}
