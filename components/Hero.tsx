@@ -56,12 +56,12 @@ const Hero = () => {
       </BoxReveal>
       <GridPattern
         numSquares={30}
-        maxOpacity={0.1}
-        duration={3}
-        repeatDelay={1}
+        maxOpacity={0.9}
+        duration={1}
+        repeatDelay={5}
         className={cn(
           "mask-[radial-gradient(500px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 -z-50"
+          "inset-x-0 inset-y-[-30%] lg:inset-y-[-30%] xl:inset-y-[-50%] h-[200%] skew-y-12 -z-50"
         )}
       />
     </div>
