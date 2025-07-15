@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -49,7 +49,7 @@ const BlurIn = ({
   // Base animated background styles - now using Tailwind classes
   const getAnimatedBackgroundClasses = () => {
     if (!useAnimatedBackground) return '';
-    
+
     return cn(
       'text-bg-animated animate-animate-background'
       // Dark mode is now handled automatically in CSS
@@ -94,7 +94,12 @@ const MaskedTextAnimation = ({
   description: boolean;
   duration: number;
   delay: number;
-  combinedVariants: any;
+  combinedVariants: {
+    hidden: { filter: string; opacity: number; clipPath?: string };
+    visible: {
+      filter: string; opacity: number; clipPath?: string
+    };
+  };
   animatedBackgroundClasses: string;
 }) => {
   const words = word.split(" ");
@@ -143,7 +148,10 @@ const SingleTextAnimation = ({
   description: boolean;
   duration: number;
   delay: number;
-  combinedVariants: any;
+  combinedVariants: {
+    hidden: { filter: string; opacity: number }
+    visible: { filter: string; opacity: number }
+  };
   animatedBackgroundClasses: string;
 }) => {
   return (

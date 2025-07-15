@@ -10,7 +10,7 @@ import {
   useTransform,
   type SpringOptions,
   AnimatePresence,
-} from "framer-motion"
+} from "motion/react"
 import { Children, createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 
@@ -55,14 +55,6 @@ interface DockContextValue {
 
 // Context
 const DockContext = createContext<DockContextValue | undefined>(undefined)
-
-function useDockContext() {
-  const context = useContext(DockContext)
-  if (!context) {
-    throw new Error("useDockContext must be used within a Dock component")
-  }
-  return context
-}
 
 // Main Dock Component
 function Dock({
