@@ -1,22 +1,20 @@
-"use client"; // This ensures that the component runs on the client side
+"use client";
 
-import { useState, useEffect } from "react"; // Adjust import as needed
-import { ChevronDown, Mouse } from "lucide-react"; // Adjust import as needed
+import { useState, useEffect } from "react";
+import { ChevronDown, Mouse } from "lucide-react";
 
 const ScrollButton = () => {
   const [opacity, setOpacity] = useState(1);
 
-  // Handle scroll event to fade the ChevronDown
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setOpacity(Math.max(1 - scrollY / 200, 0)); // Decrease opacity as you scroll
+    setOpacity(Math.max(1 - scrollY / 200, 0));
   };
 
-  // Scroll the page when the ChevronDown is clicked
   const handleClick = () => {
     window.scrollBy({
-      top: 500, // Scroll down by 200px
-      behavior: "smooth", // Smooth scroll effect
+      top: 200,
+      behavior: "smooth",
     });
   };
 
