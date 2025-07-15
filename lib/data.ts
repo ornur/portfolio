@@ -31,13 +31,57 @@ export const links = [
 
 export const experience = [
   {
-    title: "Front-End Developer",
+    title: "Middle Frontend Developer",
     company: "ZIZ INC.",
-    date: "June 2024 - June 2025",
+    location: "Astana, Kazakhstan",
+    date: "June 2024 – Present",
     description:
-      "Developed and maintained user interfaces for web applications using React and Next.js. Collaborated with designers to implement responsive designs and improve user experience. Optimized application performance and ensured cross-browser compatibility.",
+      "Spearheaded the development of modern, responsive web applications utilizing Next.js, React, and cutting-edge technologies.",
+    projects: [
+      {
+        name: "Lets Car",
+        description:
+          "Spearheaded the development of a modern, responsive car selling platform utilizing Next.js, React, Shadcn UI, and Tailwind CSS.",
+        achievements: [
+          "Engineered a dynamic multi-step car submission form with react-hook-form and sortable image uploads using @dnd-kit",
+          "Enhanced user experience through the implementation of fluid animations via framer-motion and auto-animate",
+          "Integrated robust authentication with NextAuth, implemented schema validation with Zod, and managed server state efficiently using React Query",
+        ],
+      },
+      {
+        name: "Skills Enbek Admin Dashboard",
+        description:
+          "Developed a scalable administrative panel for comprehensive management of user skills and analytics, significantly improving platform usability.",
+        achievements: [
+          "Utilized Zod and react-hook-form for resilient form validation and React Query for optimized data fetching",
+          "Designed an accessible user interface with Tailwind CSS, Radix Primitives, and lucide-react, incorporating theme-switching capabilities",
+          "Enabled data export functionalities to Excel and PDF formats via xlsx, jspdf, and file-saver",
+          "Integrated support for Markdown and mathematical expressions using marked and katex",
+        ],
+      },
+      {
+        name: "Chemexpress",
+        description:
+          "Delivered a high-performance web platform for managing chemical product data, built with a modern React architecture.",
+        achievements: [
+          "Streamlined form workflows through react-hook-form, Zod, and React Query, ensuring seamless user input handling",
+          "Increased user engagement by incorporating animations and mobile-responsive carousels using embla-carousel",
+          "Implemented internationalization features with next-intl and maintained global state effectively with Zustand",
+        ],
+      },
+      {
+        name: "CI/CD Implementation",
+        description:
+          "Established comprehensive CI/CD pipelines using GitHub Actions, replacing antiquated processes to facilitate faster and more reliable deployments.",
+        achievements: [
+          "Achieved a 40% reduction in deployment time and significantly enhanced release confidence across various environments",
+        ],
+      },
+    ],
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "React Query", "NextAuth", "Zod"],
   },
-];
+]
+
 
 export const projects = [
   {
