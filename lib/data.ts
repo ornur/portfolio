@@ -34,9 +34,7 @@ export const experience = [
     title: "Middle Frontend Developer",
     company: "ZIZ INC.",
     location: "Astana, Kazakhstan",
-    date: "June 2024 – Present",
-    description:
-      "Spearheaded the development of modern, responsive web applications utilizing Next.js, React, and cutting-edge technologies.",
+    date: "June 2024 – July 2025",
     projects: [
       {
         name: "Lets Car",
@@ -78,7 +76,6 @@ export const experience = [
         ],
       },
     ],
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "React Query", "NextAuth", "Zod"],
   },
 ]
 
