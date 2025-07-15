@@ -17,7 +17,7 @@ interface BlurIntProps {
   delay?: number;
   useAnimatedBackground?: boolean;
 }
-const BlurIn = ({
+export const BlurIn = ({
   word,
   className,
   variant,
@@ -122,7 +122,7 @@ const MaskedTextAnimation = ({
           }}
           variants={combinedVariants}
           className={cn(
-            "inline-block mr-2",
+            "inline-block mr-2 text-justify",
             animatedBackgroundClasses
           )}
         >
@@ -171,5 +171,3 @@ const SingleTextAnimation = ({
     </motion.h1>
   );
 };
-
-export default BlurIn;
