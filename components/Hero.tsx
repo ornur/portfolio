@@ -1,47 +1,44 @@
+"use client"
+
 import {
   FaGithub,
   FaLinkedin,
   FaTelegram,
 } from "react-icons/fa6";
-import BoxReveal from "./ui/box-reveal";
-import GridPattern from "./ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
+import { BoxReveal } from "./ui/box-reveal";
+import { GridPattern } from "./ui/animated-grid-pattern";
+
 import Image from "next/image";
-import PulsatingButton from "./ActiveButton";
-import ScrollButton from "./ScrollButton";
 import Link from "next/link";
+import ScrollButton from "./ScrollButton";
 
 const Hero = () => {
   return (
-    <div className="mt-64">
-      <div>
-        <div className="flex items-center space-x-1">
+    <div className="mt-44">
+      <div className="text-center">
+        <BoxReveal boxColor="black" duration={0.5}>
+          <Image
+            src="/me.webp"
+            alt="me"
+            className="rounded-full aspect-[1/1] object-cover mx-auto mb-6"
+            height={300}
+            width={300}
+          />
+        </BoxReveal>
+        <div className="flex flex-col space-x-1">
           <BoxReveal boxColor="black" duration={0.5}>
-            <Image
-              src="/me.png"
-              alt="me"
-              className="float-start"
-              height={70}
-              width={70}
-            />
+            <h3 className="text-sm md:text-lg text-gray-200">Hi, nice to meet you!</h3>
           </BoxReveal>
-          <div>
-            <BoxReveal boxColor="black" duration={0.5}>
-              <h3 className="text-sm md:text-lg">Hi, nice to meet you!</h3>
-            </BoxReveal>
-            <BoxReveal boxColor="black" duration={0.5}>
-              <h1 className="text-4xl md:text-5xl font-medium flex items-center">
-                I&apos;m Nurdaulet
-              </h1>
-            </BoxReveal>
-          </div>
+          <BoxReveal boxColor="black" duration={0.5}>
+            <h1 className="text-4xl md:text-5xl font-medium flex items-center">
+              I&apos;m Nurdaulet
+            </h1>
+          </BoxReveal>
         </div>
         <div className="flex space-x-3 items-center">
           <BoxReveal boxColor="black" duration={0.5}>
             <h2 className="text-2xl md:text-4xl font-medium">Web Developer</h2>
-          </BoxReveal>
-          <BoxReveal boxColor="black" duration={0.5}>
-            <PulsatingButton />
           </BoxReveal>
         </div>
       </div>
