@@ -28,6 +28,7 @@ export function GridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
+  repeatDelay,
   ...props
 }: GridPatternProps) {
   const id = useId();
