@@ -29,39 +29,6 @@ export const links = [
   },
 ];
 
-export const techs = [
-  {
-    name: "NextJS",
-    description: "Full-Stack Framework",
-    icon: "/next.svg",
-    color: "#3c3c3c",
-  },
-  {
-    name: "ReactJS",
-    description: "Frontend Framework",
-    icon: "/react.svg",
-    color: "#61dafb33",
-  },
-  {
-    name: "Tailwind",
-    description: "CSS Framework",
-    icon: "/tailwind.svg",
-    color: "#0ea5e933",
-  },
-  {
-    name: "Figma",
-    description: "Design Tool",
-    icon: "/figma.svg",
-    color: "#0acf8333",
-  },
-  {
-    name: "Express",
-    description: "Backend Framework",
-    icon: "/express.svg",
-    color: "#3c3c3c",
-  },
-];
-
 export const experience = [
   {
     title: "Front-End Developer",
@@ -95,7 +62,7 @@ export const projects = [
     title: "Saas Next.js Framer Motion",
     tech: "Nexjs, Framer Motion",
     image: "/projects/4.webp",
-    url: "https://saas-next-framer-motion.vercel.app/",
+    url: "https://saas-next-motion/react.vercel.app/",
   },
 ];
 
