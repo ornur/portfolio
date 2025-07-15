@@ -1,7 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
-import BlurIn from "./ui/blur-in";
+import { BlurIn } from "./ui/blur-in";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -23,8 +23,10 @@ const About = () => {
           />
           <BlurIn
             description
-            word="I am a frontend developer with a passion for creating beautiful and functional web applications. I have experience in building responsive and user-friendly interfaces using modern web technologies."
-            className="w-[90%] font-normal md:w-[60%]"
+            word="I am an experienced Frontend developer specializing in creating intuitive, responsive, and high-performance user interfaces. My main goal is to turn complex concepts into user—friendly and functional applications, while paying special attention to usability, performance, and code quality.
+I have experience working as a Frontend developer at ZIZ INC. I am currently actively looking for opportunities for further professional growth and participation in the development of meaningful and thoughtful digital products.
+Ready to work remotely. I am in Astana, Kazakhstan."
+            className="w-[90%] font-normal md:w-[60%] text-justify tracking-tight leading-8"
           />
         </div>
       )}
