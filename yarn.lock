@@ -606,7 +606,7 @@
   dependencies:
     "@radix-ui/react-slot" "1.2.3"
 
-"@radix-ui/react-slot@1.2.3":
+"@radix-ui/react-slot@1.2.3", "@radix-ui/react-slot@^1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.2.3.tgz#502d6e354fc847d4169c3bc5f189de777f68cfe1"
   integrity sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==
@@ -1278,6 +1278,13 @@ chownr@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-3.0.0.tgz#9855e64ecd240a9cc4267ce8a4aa5d24a1da15e4"
   integrity sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==
+
+class-variance-authority@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/class-variance-authority/-/class-variance-authority-0.7.1.tgz#4008a798a0e4553a781a57ac5177c9fb5d043787"
+  integrity sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==
+  dependencies:
+    clsx "^2.1.1"
 
 client-only@0.0.1:
   version "0.0.1"
@@ -2839,11 +2846,6 @@ react-icons@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.5.0.tgz#8aa25d3543ff84231685d3331164c00299cdfaf2"
   integrity sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==
-
-react-intersection-observer@^9.13.1:
-  version "9.16.0"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.16.0.tgz#7376d54edc47293300961010844d53b273ee0fb9"
-  integrity sha512-w9nJSEp+DrW9KmQmeWHQyfaP6b03v+TdXynaoA964Wxt7mdR3An11z4NNCQgL4gKSK7y1ver2Fq+JKH6CWEzUA==
 
 react-is@^16.13.1:
   version "16.13.1"
