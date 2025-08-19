@@ -88,10 +88,10 @@ export const projects = [
     url: "https://lets-car.com/",
   },
   {
-    title: "Green Data Center",
+    title: "Erten Market",
     tech: "Nextjs, Tailwind",
     image: "/projects/2.webp",
-    url: "https://green-dc.vercel.app/",
+    url: "https://erten-market.ziz.kz/",
   },
   {
     title: "Sensor data visualization",
@@ -103,7 +103,7 @@ export const projects = [
     title: "Saas Next.js Framer Motion",
     tech: "Nexjs, Framer Motion",
     image: "/projects/4.webp",
-    url: "https://saas-next-motion/react.vercel.app/",
+    url: "https://saas-next-framer-motion.vercel.app/",
   },
 ];
 
