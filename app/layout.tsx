@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import "./globals.css";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -13,6 +13,12 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   title: "Nurdaulet Orynbasarov",
   description: "My Web Developer Portfolio",
+  metadataBase: new URL("https://ornur.vercel.app"),
+  openGraph: {
+    title: "Nurdaulet Orynbasarov",
+    description: "My Web Developer Portfolio",
+    url: "https://ornur.vercel.app/opengraph-image.png",
+  }
 };
 
 export default function RootLayout({
