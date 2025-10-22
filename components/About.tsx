@@ -2,6 +2,8 @@
 
 import { BlurIn } from "./ui/blur-in";
 
+const textDescription = `I am a passionate Frontend Developer with expertise in building responsive and user-friendly web applications. I specialize in React, Next.js, and modern CSS techniques to create seamless user experiences.`;
+
 const About = () => {
 
   return (
@@ -17,9 +19,7 @@ const About = () => {
         />
         <BlurIn
           description
-          word="I am an experienced Frontend developer specializing in creating intuitive, responsive, and high-performance user interfaces. My main goal is to turn complex concepts into user—friendly and functional applications, while paying special attention to usability, performance, and code quality.
-I have experience working as a Frontend developer at ZIZ INC. I am currently actively looking for opportunities for further professional growth and participation in the development of meaningful and thoughtful digital products.
-Ready to work remotely. I am in Astana, Kazakhstan."
+          word={textDescription}
           className="font-normal md:w-[120%] tracking-tight leading-6 md:leading-8"
         />
       </div>
