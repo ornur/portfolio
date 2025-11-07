@@ -1,14 +1,15 @@
 "use client";
 
-import { Dock, DockIcon, DockItem, DockLabel } from "./ui/dock";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import Link from "next/link";
+
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { links } from "@/lib/data";
+import { Dock, DockIcon, DockItem, DockLabel } from "./ui/dock";
 
 const Nav = () => {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   // Ensure component is mounted before accessing theme
   useEffect(() => {

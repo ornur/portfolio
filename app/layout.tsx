@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeProvider } from "@/providers/theme";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -13,11 +13,11 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   title: "Nurdaulet Orynbasarov",
   description: "My Web Developer Portfolio",
-  metadataBase: new URL("https://ornur.vercel.app"),
+  metadataBase: new URL("https://nurda.vercel.app"),
   openGraph: {
     title: "Nurdaulet Orynbasarov",
     description: "My Web Developer Portfolio",
-    url: "https://ornur.vercel.app/opengraph-image.png",
+    url: "https://nurda.vercel.app/opengraph-image.png",
   }
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`flex flex-col justify-center items-center font-regular scroll-smooth! ${merriweather.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
