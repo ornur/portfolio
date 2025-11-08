@@ -41,12 +41,15 @@ export function GridPattern({
   }, [dimensions.width, dimensions.height, width, height]);
 
   // Adjust the generateSquares function to return objects with an id, x, and y
-  const generateSquares = useCallback((count: number) => {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      pos: getPos(),
-    }));
-  }, [getPos]);
+  const generateSquares = useCallback(
+    (count: number) => {
+      return Array.from({ length: count }, (_, i) => ({
+        id: i,
+        pos: getPos(),
+      }));
+    },
+    [getPos],
+  );
 
   const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
