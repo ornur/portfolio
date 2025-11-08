@@ -10,8 +10,10 @@ import { projects } from "@/lib/data";
 
 const Projects = () => {
   return (
-    <div className="mt-20 w-full space-y-10">
-      <h1 className="text-5xl font-bold tracking-[-0.02em]">Projects</h1>
+    <div className="mt-40 w-full space-y-10">
+      <h1 className="text-center text-[2.1rem] font-bold tracking-[-0.02em] lg:text-5xl">
+        Projects
+      </h1>
       <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div

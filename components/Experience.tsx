@@ -16,8 +16,10 @@ const Experience = () => {
   };
 
   return (
-    <div className="mt-200 w-full space-y-10">
-      <h1 className="text-5xl font-bold tracking-[-0.02em]">Work Experience</h1>
+    <div className="mt-180 md:mt-200 w-full space-y-10">
+      <h1 className="text-[2.1rem] text-center font-bold tracking-[-0.02em] lg:text-5xl">
+        Work Experience
+      </h1>
       {experience.map((exp, index) => (
         <motion.div
           key={index}

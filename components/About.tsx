@@ -10,10 +10,10 @@ export default function About() {
     <div className="mt-96 flex flex-col items-center justify-center gap-4">
       <ShimmeringText
         text="Frontend Developer"
-        className="text-3xl font-semibold md:text-5xl lg:text-7xl"
+        className="text-[2.1rem] font-semibold md:text-5xl lg:text-7xl"
         duration={3}
       />
-      <p className="text-justify text-sm leading-6 font-normal tracking-tight md:text-xl md:leading-8">
+      <p className="md:text-justify text-sm leading-8 font-normal tracking-tight md:text-xl">
         {textDescription}
       </p>
     </div>
