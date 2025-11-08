@@ -77,8 +77,7 @@ export const experience = [
       },
     ],
   },
-]
-
+];
 
 export const projects = [
   {
@@ -111,57 +110,116 @@ export const TECHNOLOGIES = [
   {
     id: "nextjs",
     title: "Next.js",
-    description: "A Modern React framework built by ",
-    author: "@vercel",
-    website: "https://vercel.com",
     icon: "/icons/nextjs.svg",
-    position: { row: 1, col: 1 },
+    iconLight: "/icons/nextjs.svg",
+
   },
   {
     id: "react",
     title: "React",
-    description:
-      "A JavaScript library for building user interfaces built by the developers at ",
-    author: "@facebook",
-    website: "https://react.dev",
     icon: "/icons/react.svg",
-    position: { row: 1, col: 2 },
+    iconLight: "/icons/react.svg",
   },
   {
     id: "tailwind",
     title: "Tailwind CSS",
-    description: "A utility-first CSS framework built by ",
-    author: "@tailwindcss",
-    website: "https://tailwindcss.com",
     icon: "/icons/tailwind.svg",
-    position: { row: 1, col: 3 },
+    iconLight: "/icons/tailwind.svg",
   },
   {
     id: "typescript",
     title: "TypeScript",
-    description:
-      "A statically typed programming language that builds on JavaScript built by ",
-    author: "@microsoft",
-    website: "https://www.typescriptlang.org/",
     icon: "/icons/typescript.svg",
-    position: { row: 2, col: 1 },
+    iconLight: "/icons/typescript.svg",
   },
   {
     id: "shadcn-ui",
     title: "Shadcn UI",
-    description: "A component library for building modern UIs",
-    author: "@shadcn",
-    website: "https://ui.shadcn.com",
     icon: "/icons/shadcn.svg",
-    position: { row: 2, col: 3 },
+    iconLight: "/icons/shadcn-light.svg",
   },
   {
     id: "nodejs",
     title: "Node.js",
-    description: "A runtime environment to run JavaScript on servers ",
-    author: "@nodejs",
-    website: "https://nodejs.org/en",
     icon: "/icons/nodejs.svg",
-    position: { row: 2, col: 2 },
+    iconLight: "/icons/nodejs.svg",
   },
+  {
+    id: "vite",
+    title: "Vite",
+    icon: "/icons/vite.svg",
+    iconLight: "/icons/vite.svg",
+  },
+  {
+    id: "zod",
+    title: "Zod",
+    icon: "/icons/zod.svg",
+    iconLight: "/icons/zod.svg",
+},
+  {
+    id: "motion",
+    title: "Motion",
+    icon: "/icons/motion.svg",
+    iconLight: "/icons/motion-light.svg",
+  },
+  {
+    id: "tanstack-query",
+    title: "TanStack Query",
+    icon: "/icons/tanstack.png",
+    iconLight: "/icons/tanstack.png",
+  },
+  {
+    id: "react-hook-form",
+    title: "React Hook Form",
+    icon: "/icons/rhf.svg",
+    iconLight: "/icons/rhf.svg",
+  },
+  {
+    id: "graphql",
+    title: "GraphQL",
+    icon: "/icons/graphql.svg",
+    iconLight: "/icons/graphql.svg",
+  },
+  {
+    id: "docker",
+    title: "Docker",
+    icon: "/icons/docker.svg",
+    iconLight: "/icons/docker.svg",
+  },
+  {
+    id: "MongoDB",
+    title: "MongoDB",
+    icon: "/icons/mongodb.svg",
+    iconLight: "/icons/mongodb.svg",
+  },
+  {
+    id: "prisma",
+    title: "Prisma",
+    icon: "/icons/prisma-dark.svg",
+    iconLight: "/icons/prisma-light.svg",
+  },
+  {
+    id: "redis",
+    title: "Redis",
+    icon: "/icons/redis.svg",
+    iconLight: "/icons/redis.svg",
+  },
+  {
+    id: "axios",
+    title: "Axios",
+    icon: "/icons/axios.svg",
+    iconLight: "/icons/axios.svg",
+  },
+  {
+    id:"webpack",
+    title: "Webpack",
+    icon: "/icons/webpack.svg",
+    iconLight: "/icons/webpack.svg",
+  },
+  {
+    id: "eslint",
+    title: "ESLint",
+    icon: "/icons/eslint.svg",
+    iconLight: "/icons/eslint.svg",
+  }
 ];

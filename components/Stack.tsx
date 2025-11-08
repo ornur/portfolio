@@ -1,137 +1,47 @@
 "use client";
 
-import { motion } from "motion/react";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "./ui/hover-card";
-import { TECHNOLOGIES } from "@/lib/data";
-
-import Link from "next/link";
 import Image from "next/image";
+import { TECHNOLOGIES } from "@/lib/data";
+import { useTheme } from "@/hooks/use-theme";
 
-// Type definitions
-interface Technology {
-  id: string;
-  title: string;
-  description: string;
-  author: string;
-  website: string;
-  icon: string
-  position: {
-    row: number;
-    col: number;
-  };
-}
+import { InfiniteSlider } from "./ui/infinite-slider";
 
-interface TechCardProps extends Technology {
-  children?: React.ReactNode;
-}
+const stack1 = TECHNOLOGIES.slice(0, TECHNOLOGIES.length / 2);
+const stack2 = TECHNOLOGIES.slice(TECHNOLOGIES.length / 2);
 
-interface HoverCardWrapperProps {
-  children: React.ReactNode;
-  description: string;
-  author: string;
-  website: string;
-}
-
-
-// Main component
 export default function Techs() {
+  const { theme } = useTheme(); 
   return (
-    <motion.div
-      className="mt-40 w-full"
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5 },
-      }}
-    >
-      <section className="techs flex flex-col gap-6 p-(--padding) py-16 mb-12 max-sm:text-center w-full">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-5xl font-bold tracking-[-0.02em]">
-            What I work with
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {TECHNOLOGIES.map((tech) => (
-            <TechCard
-              key={tech.id}
-              {...tech}
-              icon={tech.icon}
-            >
-              <span className="font-medium text-lg tracking-tight">
-                {tech.title}
-              </span>
-            </TechCard>
-          ))}
-        </div>
-      </section>
-    </motion.div>
-  );
-}
-
-function TechCard({
-  title,
-  description,
-  author,
-  website,
-  icon,
-  children,
-}: TechCardProps) {
-  return (
-    <div className="card w-full h-44 dark:bg-card border-black rounded-md border hover:border-(--border-bright) dark:border-border dark:hover:border-(--border-bright) dark:hover:bg-(--accent-bright) transition-all duration-300 ease-in-out">
-      <HoverCardWrapper
-        description={description}
-        author={author}
-        website={website}
-      >
-        <div className="w-full h-full flex gap-5 flex-col items-center justify-center group cursor-pointer">
-          <div className="relative w-[100px] h-[100px] p-4 pb-0 group-hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="absolute top-364 w-full space-y-16">
+      <h2 className="ml-130 flex flex-col gap-2 text-5xl font-bold tracking-[-0.02em]">
+        What I work with
+      </h2>
+      <div className="space-y-24">
+        <InfiniteSlider gap={144} className="h-25" reverse>
+          {stack1.map((tech) => (
             <Image
-              src={icon}
-              alt={`${title} logo`}
-              fill
-              className="object-contain invert dark:invert-0"
-              sizes="100px"
+              key={tech.id}
+              src={theme === "light" ? tech.iconLight : tech.icon}
+              width={75}
+              height={75}
+              className="h-25 object-contain"
+              alt=""
             />
-          </div>
-          {children}
-        </div>
-      </HoverCardWrapper >
-    </div >
-  );
-}
-
-
-function HoverCardWrapper({
-  children,
-  description,
-  author,
-  website,
-}: HoverCardWrapperProps) {
-  return (
-    <HoverCard>
-      <HoverCardTrigger asChild>
-        {children}
-      </HoverCardTrigger>
-      <HoverCardContent className="w-80">
-        <div className="space-y-2">
-          <p className="text-sm text-muted-foreground">
-            {description}
-            <Link
-              href={website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-(--geist-cyan) bg-(--geist-cyan-dark) px-1 rounded hover:underline transition-colors"
-            >
-              {author}
-            </Link>
-          </p>
-        </div>
-      </HoverCardContent>
-    </HoverCard>
+          ))}
+        </InfiniteSlider>
+        <InfiniteSlider gap={144} className="h-25">
+          {stack2.map((tech) => (
+            <Image
+              key={tech.id}
+              src={theme === "light" ? tech.iconLight : tech.icon}
+              width={75}
+              height={75}
+              className="h-25 object-contain"
+              alt=""
+            />
+          ))}
+        </InfiniteSlider>
+      </div>
+    </div>
   );
 }
