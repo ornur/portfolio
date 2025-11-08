@@ -1,30 +1,21 @@
 "use client";
 
-import { BlurIn } from "./ui/blur-in";
+import { ShimmeringText } from "./ui/shimmering-text";
 
-const textDescription = `I am a passionate Frontend Developer with expertise in building responsive and user-friendly web applications. I specialize in React, Next.js, and modern CSS techniques to create seamless user experiences.`;
+const textDescription = `I am a Frontend developer with extensive work experience. My specialty is creating user—friendly and functional interfaces that easily adapt to different devices and provide high-speed operation.
+My goal is to make complex ideas accessible and understandable to users, while paying special attention to code quality, performance, and usability.`;
 
-const About = () => {
-
+export default function About() {
   return (
-    <div className="mt-96 flex justify-center">
-      <div className="flex flex-col items-center gap-4">
-        <BlurIn
-          word="Frontend Developer"
-          className="font-semibold"
-          useAnimatedBackground
-          useMask
-          duration={2}
-          delay={0}
-        />
-        <BlurIn
-          description
-          word={textDescription}
-          className="font-normal md:w-[120%] tracking-tight leading-6 md:leading-8"
-        />
-      </div>
+    <div className="mt-96 flex flex-col items-center justify-center gap-4">
+      <ShimmeringText
+        text="Frontend Developer"
+        className="text-3xl font-semibold md:text-5xl lg:text-7xl"
+        duration={3}
+      />
+      <p className="text-justify text-sm leading-6 font-normal tracking-tight md:text-xl md:leading-8">
+        {textDescription}
+      </p>
     </div>
   );
-};
-
-export default About;
+}
