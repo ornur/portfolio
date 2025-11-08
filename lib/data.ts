@@ -1,16 +1,11 @@
 import React from "react";
-import { Activity, HomeIcon, Mail, ScrollText, SunMoon } from "lucide-react";
+import { HomeIcon, Mail, ScrollText, SunMoon } from "lucide-react";
 
 export const links = [
   {
     title: "Home",
     icon: React.createElement(HomeIcon),
-    href: "#",
-  },
-  {
-    title: "Activity",
-    icon: React.createElement(Activity),
-    href: "https://github.com/ornur/",
+    href: "#top",
   },
   {
     title: "Resume",
