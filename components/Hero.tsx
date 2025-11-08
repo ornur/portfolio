@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
         <div className="flex space-x-3 items-center">
           <BoxReveal boxColor="black" duration={0.5}>
-            <h2 className="text-2xl md:text-4xl font-medium">Web Developer</h2>
+            <h2 className="text-2xl md:text-4xl font-medium">Frontend Developer</h2>
           </BoxReveal>
         </div>
       </div>
