@@ -87,6 +87,18 @@
     color: var(--color-foreground);
     font-family: Arial, Helvetica, sans-serif;
   }
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+  }
+
   :root {
     --background: 0 0% 93%;
     --foreground: 0 0% 3.9%;
@@ -120,6 +132,8 @@
     --color-5: 90 100% 63%;
     --shimmer-base: oklch(0.25 0 0);
     --shimmer-light: oklch(0.75 0 0);
+    --sb-track-color: oklch(100% 0.00011 271.152);
+    --sb-thumb-color: oklch(0% 0 0);
   }
   .dark {
     --background: 0 0% 7%;
@@ -153,5 +167,7 @@
     --color-5: 90 100% 63%;
     --shimmer-base: oklch(0.3 0 0);
     --shimmer-light: oklch(0.75 0 0);
+    --sb-track-color: oklch(0.1 0 0);
+    --sb-thumb-color: oklch(0.4 0 0);
   }
 }
