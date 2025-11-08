@@ -10,12 +10,12 @@ import { projects } from "@/lib/data";
 
 const Projects = () => {
   return (
-    <div className="mt-20 w-full">
-      <h1 className="font-medium text-3xl mb-7">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
+    <div className="mt-20 w-full space-y-10">
+      <h1 className="text-5xl font-bold tracking-[-0.02em]">Projects</h1>
+      <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div
-            className="w-[250px] group hover:text-teal-500"
+            className="group w-[250px]"
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <Link href={project.url} target="_blank">
-              <div className="aspect-video bg-muted relative">
+              <div className="bg-muted relative aspect-video">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -31,10 +31,10 @@ const Projects = () => {
                   className="h-full w-full rounded object-cover"
                 />
               </div>
-              <div className="flex items-center justify-between mt-3">
+              <div className="mt-3 flex items-center justify-between">
                 <span>
                   <h1 className="text-sm">{project.title}</h1>
-                  <h2 className="text-xs text-zinc-500 dark:text-[#cecece] group-hover:text-teal-500">
+                  <h2 className="text-xs text-zinc-500 group-hover:text-teal-500 dark:text-[#cecece]">
                     {project.tech}
                   </h2>
                 </span>

@@ -76,28 +76,28 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Portfolio - Alibi Alisher",
+    tech: "React, Motion, TailwindCSS",
+    image: "/projects/alibi.webp",
+    url: "https://alibialisher.kz/",
+  },
+  {
+    title: "Saas Startup",
+    tech: "Nexjs, Framer Motion",
+    image: "/projects/4.webp",
+    url: "https://saas-next-framer-motion.vercel.app/",
+  },
+  {
     title: "Let's Car",
-    tech: "Shadcn, Motion",
+    tech: "Motion, Tanstack Query, NextAuth",
     image: "/projects/3.webp",
     url: "https://lets-car.com/",
   },
   {
-    title: "Erten Market",
-    tech: "Nextjs, Tailwind",
-    image: "/projects/2.webp",
-    url: "https://erten-market.ziz.kz/",
-  },
-  {
-    title: "Sensor data visualization",
-    tech: "Nextjs, Shadcn",
+    title: "Generative sensor visualization",
+    tech: "Shadcn, Rechart, TailwindCSS",
     image: "/projects/1.webp",
     url: "https://factory.abzy.kz/",
-  },
-  {
-    title: "Saas Next.js Framer Motion",
-    tech: "Nexjs, Framer Motion",
-    image: "/projects/4.webp",
-    url: "https://saas-next-framer-motion.vercel.app/",
   },
 ];
 
@@ -107,7 +107,6 @@ export const TECHNOLOGIES = [
     title: "Next.js",
     icon: "/icons/nextjs.svg",
     iconLight: "/icons/nextjs.svg",
-
   },
   {
     id: "react",
@@ -150,7 +149,7 @@ export const TECHNOLOGIES = [
     title: "Zod",
     icon: "/icons/zod.svg",
     iconLight: "/icons/zod.svg",
-},
+  },
   {
     id: "motion",
     title: "Motion",
@@ -206,7 +205,7 @@ export const TECHNOLOGIES = [
     iconLight: "/icons/axios.svg",
   },
   {
-    id:"webpack",
+    id: "webpack",
     title: "Webpack",
     icon: "/icons/webpack.svg",
     iconLight: "/icons/webpack.svg",
@@ -216,5 +215,5 @@ export const TECHNOLOGIES = [
     title: "ESLint",
     icon: "/icons/eslint.svg",
     iconLight: "/icons/eslint.svg",
-  }
+  },
 ];
