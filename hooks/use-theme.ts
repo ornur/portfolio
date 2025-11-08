@@ -5,8 +5,40 @@ export function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
+    // Check initial theme
     const isDark = document.documentElement.classList.contains("dark");
     setTheme(isDark ? "dark" : "light");
+
+    // Listen for theme changes using MutationObserver
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
+          const isDark = document.documentElement.classList.contains("dark");
+          setTheme(isDark ? "dark" : "light");
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Also listen for custom theme change events
+    const handleThemeChange = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      setTheme(isDark ? "dark" : "light");
+    };
+
+    window.addEventListener("themechange", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("themechange", handleThemeChange);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -14,6 +46,12 @@ export function useTheme() {
       const newTheme = prev === "dark" ? "light" : "dark";
       document.documentElement.classList.toggle("dark", newTheme === "dark");
       localStorage.setItem("theme", newTheme);
+
+      // Dispatch custom event asynchronously to avoid render conflicts
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent("themechange"));
+      }, 0);
+
       return newTheme;
     });
   };
