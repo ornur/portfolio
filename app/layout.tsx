@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
-import { ThemeProvider } from "@/providers/theme";
+import Script from "next/script";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Nurdaulet Orynbasarov",
     description: "My Web Developer Portfolio",
     url: "https://nurda.vercel.app/opengraph-image.png",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -28,10 +28,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col justify-center items-center font-regular scroll-smooth! ${merriweather.variable}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          {children}
-        </ThemeProvider>
+      <Script>
+        {`try {
+          const stored = localStorage.getItem('theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && systemDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+        }
+        } catch (_) {}`}
+      </Script>
+
+      <body
+        className={`font-regular flex flex-col items-center justify-center scroll-smooth! ${merriweather.variable}`}
+      >
+        {children}
       </body>
     </html>
   );
