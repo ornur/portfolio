@@ -91,7 +91,7 @@ export const projects = [
     title: "Let's Car",
     tech: "Motion, Tanstack Query, NextAuth",
     image: "/projects/3.webp",
-    url: "https://lets-car.com/",
+    url: "https://lets-car.vercel.app/",
   },
   {
     title: "Generative sensor visualization",
