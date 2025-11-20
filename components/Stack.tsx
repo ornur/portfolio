@@ -30,7 +30,7 @@ export default function Techs() {
     <motion.div 
       ref={containerRef}
       style={{ opacity, y }}
-      className="absolute top-500 md:top-800 w-full space-y-16"
+      className="absolute top-650 md:top-800 w-full space-y-16"
     >
       <h2 className="inset-x-0 flex flex-col gap-2 text-center text-[2.1rem] font-bold tracking-[-0.02em] md:text-5xl">
         What I work with
