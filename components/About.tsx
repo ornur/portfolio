@@ -43,7 +43,7 @@ export default function About() {
   const x = useTransform(
     scrollYProgress,
     [0, 0.4, 0.5, 0.6, 0.8, 0.9, 1],
-    [0, 0, 420, 1610, 4050, 4000, 2000],
+    [0, 0, 1960, 7880, 19750, 4000, 2000],
   );
   const xMobile = useTransform(
     scrollYProgress,
