@@ -18,38 +18,15 @@ export default function About() {
   });
   const mobile = useIsMobile();
 
-  // Extreme scale to zoom through letter D center - wait at start, then scale
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.5, 0.6, 0.8, 0.9, 1],
-    [1, 1, 8, 32, 80, 200, 200],
-  );
-  const scaleMobile = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.5, 0.6, 0.8, 0.9, 1],
-    [1, 1, 10, 100, 300, 600, 1000],
-  );
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.4, 0.6, 0.7, 0.8],
-    [0, 1, 1, 1, 1, 0],
-  );
-  const opacityMobile = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.4, 0.6, 0.7, 0.8],
-    [0, 1, 1, 0, 0, 0],
-  );
+  // For Desktop
+  const scale = useTransform(scrollYProgress, [0, 0.4, 0.8], [1, 1, 80]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.8], [0, 1, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.4, 0.8], [0, 0, 19750]);
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.5, 0.6, 0.8, 0.9, 1],
-    [0, 0, 1960, 7880, 19750, 4000, 2000],
-  );
-  const xMobile = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.5, 0.6, 0.8, 0.9, 1],
-    [0, 0, 400, 2150, 6900, 10600, 2000],
-  );
+  // For Mobile
+  const scaleMobile = useTransform(scrollYProgress, [0, 0.4, 0.6], [1, 1, 100]);
+  const opacityMobile = useTransform(scrollYProgress, [0, 0.4, 0.6], [0, 1, 0]);
+  const xMobile = useTransform(scrollYProgress, [0, 0.4, 0.6], [0, 0, 11550]);
 
   return (
     <div
@@ -84,8 +61,8 @@ export default function About() {
         style={{
           opacity: useTransform(
             scrollYProgress,
-            [0, 0.1, 0.2, 0.3, 0.4, 0.45],
-            [0, 1, 1, 1, 0.5, 0],
+            [0, 0.1, 0.4, 0.45],
+            [0, 1, 0.5, 0],
           ),
           y: useTransform(scrollYProgress, [0, 0.3], [200, 0]),
         }}
@@ -95,6 +72,6 @@ export default function About() {
           {textDescription}
         </p>
       </motion.div>
-    </div>
+    </div >
   );
 }
