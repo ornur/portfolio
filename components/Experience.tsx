@@ -16,8 +16,8 @@ const Experience = () => {
   };
 
   return (
-    <div className="w-full space-y-10 mt-50">
-      <h1 className="text-center text-[2.1rem] font-bold tracking-[-0.02em] lg:text-5xl">
+    <div className="w-full space-y-10 h-screen mt-50">
+      <h1 className="mb-12 font-semibold text-center text-[2.1rem] tracking-[-0.02em] md:text-5xl">
         Work Experience
       </h1>
       {experience.map((exp, index) => (

@@ -1,17 +1,17 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
-
 import Image from "next/image";
 import Link from "next/link";
+
+import { ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
 
 import { projects } from "@/lib/data";
 
 const Projects = () => {
   return (
-    <div className="mt-40 w-full space-y-10">
-      <h1 className="text-center text-[2.1rem] font-bold tracking-[-0.02em] lg:text-5xl">
+    <div className="w-full space-y-10 md:h-[60vh] mt-50">
+      <h1 className="mb-12 font-semibold text-center text-[2.1rem] tracking-[-0.02em] md:text-5xl">
         Projects
       </h1>
       <div className="grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2">
